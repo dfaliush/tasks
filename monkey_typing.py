@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 
-def count_words(string, set):
+
+def count_words(string, fromset):
 
     counter = 0
-    b = list(set)
+    b = list(fromset)
     for word in b:
         if word in string.lower():
             counter += 1
@@ -13,5 +14,3 @@ assert count_words("How aresjfhdskfhskd you?", {'how', 'are', 'you', 'hello'}) =
 assert count_words("Bananas, give me bananas!!!", {'banana', 'bananas'}) == 2
 assert count_words("Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
                    {'sum', 'hamlet', 'infinity', 'anything'}) == 1
-
-
